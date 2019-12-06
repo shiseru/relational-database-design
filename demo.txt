@@ -1,0 +1,131 @@
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:1: NOTICE:  drop cascades to 32 other objects
+DETAIL:  drop cascades to table vacationschema.host
+drop cascades to table vacationschema.property
+drop cascades to table vacationschema.luxuries
+drop cascades to table vacationschema.luxury
+drop cascades to table vacationschema.city_property
+drop cascades to table vacationschema.water_properties
+drop cascades to table vacationschema.water_property
+drop cascades to table vacationschema.property_price
+drop cascades to table vacationschema.rental
+drop cascades to table vacationschema.my_user
+drop cascades to table vacationschema.renter
+drop cascades to table vacationschema.guest
+drop cascades to type vacationschema.myrating
+drop cascades to table vacationschema.rental_rate
+drop cascades to table vacationschema.rating_comment
+drop cascades to table vacationschema.host_rate
+drop cascades to view vacationschema.rental_guest_count
+drop cascades to view vacationschema.rental_property_capacity
+drop cascades to view vacationschema.at_cap_rental
+drop cascades to view vacationschema.at_cap_result
+drop cascades to view vacationschema.below_cap_rental
+drop cascades to view vacationschema.below_cap_result
+drop cascades to view vacationschema.host_avg_rating
+drop cascades to view vacationschema.highest_rated_host
+drop cascades to view vacationschema.water_rental
+drop cascades to view vacationschema.water_result
+drop cascades to view vacationschema.city_rental
+drop cascades to view vacationschema.city_result
+drop cascades to view vacationschema.other_rental
+drop cascades to view vacationschema.other_result
+drop cascades to view vacationschema.property_price_summary
+drop cascades to view vacationschema.max_property_price_range
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE DOMAIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 3
+INSERT 0 6
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 6
+INSERT 0 14
+INSERT 0 6
+INSERT 0 5
+INSERT 0 5
+INSERT 0 6
+INSERT 0 7
+INSERT 0 9
+INSERT 0 3
+INSERT 0 5
+
+-------------------- Query 1: -----------------------------------
+
+           name           | num_of_properties
+--------------------------+-------------------
+ laundry service          |                 2
+ daily cleaning           |                 3
+ sauna                    |                 2
+ hot tub                  |                 4
+ concierge service        |                 2
+ daily breakfast delivery |                 1
+(6 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ at_cap_count | at_cap_avg_rating  | below_cap_count | below_cap_avg_rating
+--------------+--------------------+-----------------+----------------------
+            3 | 3.8333333333333333 |               2 |   1.6666666666666667
+(1 row)
+
+
+-------------------- Query 3: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+     email     |     avg_rating     | highest_price
+---------------+--------------------+---------------
+ han@gmail.com | 4.3333333333333333 |          1220
+(1 row)
+
+
+-------------------- Query 4: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ avg_water_extra_guest  | avg_city_extra_guest | avg_other_extra_guest
+------------------------+----------------------+-----------------------
+ 1.00000000000000000000 |   2.0000000000000000 |    1.5000000000000000
+(1 row)
+
+
+-------------------- Query 5: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+ property_id | max_price | min_price | price_range | max_price_range
+-------------+-----------+-----------+-------------+-----------------
+           3 |       750 |       750 |           0 |
+           5 |      1220 |      1000 |         220 | *
+           2 |       600 |       580 |          20 |
+(3 rows)
